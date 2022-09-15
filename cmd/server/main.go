@@ -13,7 +13,7 @@ func main() {
 	srv := &adder.GRPCServer{}
 	api.RegisterAdderServer(s, srv)
 
-	l, err := net.Listen("tcp", ":9001")
+	l, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		log.Fatal(err)
 	}
