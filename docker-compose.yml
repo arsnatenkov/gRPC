@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  protoc-all:
+    image: namely/protoc-all:latest
+    command:
+      -d api/proto
+      -o pkg/api
+      -l go
+      --with-gateway
+    volumes:
+      - ./:/defs
